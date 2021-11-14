@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="Webpage.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+    </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+
+  <div class="jumbotron">
+    <h1 class="text-center mt-3 ml-4 mb-3">My News and Weather Dashboard</h1>
+  </div>
+  <div class="row">
+    <div class="selection col-6">
+      <h2 class="text-center">News Dashboard</h2>
+      <ul class="nav nav nav-pills nav-fill col-7" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="Everything-tab" data-toggle="tab" href="#Everything" role="tab"
+            aria-controls="Everything" aria-selected="true">Everything</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="Top-headlines-tab" data-toggle="tab" href="#Top-headlines" role="tab"
+            aria-controls="Top-headlines" aria-selected="false">Top headlines</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="Sources-tab" data-toggle="tab" href="#Sources" role="tab" aria-controls="Sources"
+            aria-selected="false">Sources</a>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="Everything" role="tabpanel" aria-labelledby="Everything-tab">
+          <form>
+            <div class="form-group">
+              <label class="labels" for="content">Content</label>
+              <input type="text" class="form-control " id="Everything-content">
+            </div>
+
+            <div class="form-group">
+              <label class="labels" for="from">From</label>
+              <input type="date" class="form-control " id="Everything-from">
+            </div>
+
+            <div class="form-group">
+              <label class="labels" for="to">To</label>
+              <input type="date" class="form-control" id="Everything-to">
+            </div>
+
+            <div class="form-group">
+              <label class="labels" for="lanuage">Lanuage</label>
+              <select class="form-control " id="Everything-lanuage">
+                <option value="">Not required</option>
+                <option value="ar">Arabic</option>
+                <option value="de">Deutsch</option>
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="he">Hebrew</option>
+                <option value="it">Italian</option>
+                <option value="nl">Nederlands</option>
+                <option value="no">Norsk</option>
+                <option value="pt">Portugues</option>
+                <option value="ru">Russian</option>
+                <option value="se">Northern Sami</option>
+                <option value="zh">Chinese</option>
+              </select>
+            </div>
+
+            <button type="button" class="btn btn-primary ml-5 mt-2" id="Everything-btn">Submit</button>
+          </form>
+        </div>
+
+        <div class="tab-pane fade" id="Top-headlines" role="tabpanel" aria-labelledby="Top-headlines-tab">
+          <form>
+            <div class="form-group">
+              <label class="labels" for="content">Content</label>
+              <input type="text" class="form-control" id="Top-headlines-content">
+            </div>
+
+            <div class="form-group">
+              <label class="labels" for="country">Country</label>
+              <select class="form-control" id="Top-headlines-country">
+                <option value="ae"> United Arab Emirates</option>
+                <option value="ar">Argentina</option>
+                <option value="at">Austria</option>
+                <option value="au">Australia</option>
+                <option value="be">Belgium</option>
+                <option value="bg">Bulgeria</option>
+                <option value="br">Brazil</option>
+                <option value="ca">Canada</option>
+                <option value="cn">China</option>
+                <option value="co">Colombia</option>
+                <option value="cu">Cuba</option>
+                <option value="cz">Czechia</option>
+                <option value="de">Germany</option>
+                <option value="eg">Egypt</option>
+                <option value="fr">France</option>
+                <option value="gb">United Kingdom</option>
+                <option value="gr">Greece</option>
+                <option value="hk">Hong Kong</option>
+                <option value="hu">Hungary</option>
+                <option value="id">Indonesia</option>
+                <option value="ie">Ireland </option>
+                <option value="il">Israel</option>
+                <option value="in">India</option>
+                <option value="it">Italy</option>
+                <option value="jp">Japan</option>
+                <option value="kr">South Korea</option>
+                <option value="lt">Lithuania</option>
+                <option value="lv">Latvia</option>
+                <option value="ma">Morocco</option>
+                <option value="mx">Mexico</option>
+                <option value="my">Malaysia</option>
+                <option value="ng">Nigeria</option>
+                <option value="nl">Nederlands</option>
+                <option value="no">Norway</option>
+                <option value="nz">New Zealand</option>
+                <option value="ph">Philippines</option>
+                <option value="pl">Poland</option>
+                <option value="pt">Portugal</option>
+                <option value="ro">Romania</option>
+                <option value="rs">Serbia</option>
+                <option value="ru">Russia</option>
+                <option value="sa">Saudi Arabia</option>
+                <option value="se">Sweden</option>
+                <option value="sg">Singapore </option>
+                <option value="si">Slovenia</option>
+                <option value="sk">Slovakia</option>
+                <option value="th">Thailand</option>
+                <option value="tr">Turkey</option>
+                <option value="tw">Taiwan</option>
+                <option value="ua">Ukraine</option>
+                <option value="us">United States</option>
+                <option value="ve">Venezuela</option>
+                <option value="za">South Africa </option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="labels" for="category">Category</label>
+              <select class="form-control" id="Top-headlines-category">
+                <option value="business">Business</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="general">General</option>
+                <option value="health">Health</option>
+                <option value="science">Science</option>
+                <option value="sports">Sports</option>
+                <option value="technology">Technology</option>
+              </select>
+            </div>
+
+            <button type="button" class="btn btn-primary ml-5 mt-2" id="Top-headlines-btn">Submit</button>
+          </form>
+
+        </div>
+
+        <div class="tab-pane fade" id="Sources" role="tabpanel" aria-labelledby="Sources-tab">
+          <form>
+            <div class="form-group">
+              <label class="labels" for="category">Category</label>
+              <select class="form-control" id="Sources-category">
+                <option value="business">Business</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="general">General</option>
+                <option value="health">Health</option>
+                <option value="science">Science</option>
+                <option value="sports">Sports</option>
+                <option value="technology">Technology</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="labels" for="lanuage">Lanuage</label>
+              <select class="form-control" id="Sources-lanuage">
+                <option value="ar">Arabic</option>
+                <option value="de">Deutsch</option>
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="he">Hebrew</option>
+                <option value="it">Italian</option>
+                <option value="nl">Nederlands</option>
+                <option value="no">Norsk</option>
+                <option value="pt">Portugues</option>
+                <option value="ru">Russian</option>
+                <option value="se">Northern Sami</option>
+                <option value="zh">Chinese</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="labels" for="country">Country</label>
+              <select class="form-control" id="Sources-country">
+                <option value="ae"> United Arab Emirates</option>
+                <option value="ar">Argentina</option>
+                <option value="at">Austria</option>
+                <option value="au">Australia</option>
+                <option value="be">Belgium</option>
+                <option value="bg">Bulgeria</option>
+                <option value="br">Brazil</option>
+                <option value="ca">Canada</option>
+                <option value="cn">China</option>
+                <option value="co">Colombia</option>
+                <option value="cu">Cuba</option>
+                <option value="cz">Czechia</option>
+                <option value="de">Germany</option>
+                <option value="eg">Egypt</option>
+                <option value="fr">France</option>
+                <option value="gb">United Kingdom</option>
+                <option value="gr">Greece</option>
+                <option value="hk">Hong Kong</option>
+                <option value="hu">Hungary</option>
+                <option value="id">Indonesia</option>
+                <option value="ie">Ireland </option>
+                <option value="il">Israel</option>
+                <option value="in">India</option>
+                <option value="it">Italy</option>
+                <option value="jp">Japan</option>
+                <option value="kr">South Korea</option>
+                <option value="lt">Lithuania</option>
+                <option value="lv">Latvia</option>
+                <option value="ma">Morocco</option>
+                <option value="mx">Mexico</option>
+                <option value="my">Malaysia</option>
+                <option value="ng">Nigeria</option>
+                <option value="nl">Nederlands</option>
+                <option value="no">Norway</option>
+                <option value="nz">New Zealand</option>
+                <option value="ph">Philippines</option>
+                <option value="pl">Poland</option>
+                <option value="pt">Portugal</option>
+                <option value="ro">Romania</option>
+                <option value="rs">Serbia</option>
+                <option value="ru">Russia</option>
+                <option value="sa">Saudi Arabia</option>
+                <option value="se">Sweden</option>
+                <option value="sg">Singapore </option>
+                <option value="si">Slovenia</option>
+                <option value="sk">Slovakia</option>
+                <option value="th">Thailand</option>
+                <option value="tr">Turkey</option>
+                <option value="tw">Taiwan</option>
+                <option value="ua">Ukraine</option>
+                <option value="us">United States</option>
+                <option value="ve">Venezuela</option>
+                <option value="za">South Africa </option>
+              </select>
+            </div>
+
+            <button type="button" class="btn btn-primary ml-5 mt-2" id="Sources-btn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="whether col-5">
+      <h2 class="text-center">Weather Dashboard</h2>
+      <form>
+        <div class="form-group">
+          <label class="labels" for="city">City</label>
+          <input type="text" class="form-control" id="city-select">
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="labels" for="country">Country</label>
+          <input type="text" class="form-control" id="Country-select">
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="labels" for="txtmessage">Telephone Number:</label>
+          <input type="text" class="form-control" id="temp-tele">
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="labels" for="message">Send me a text when temperature is greater than:</label>
+          <input type="text" class="form-control" id="temp-select">
+        </div>
+
+        <div class="form-group">
+          <label class="labels">Tempterature: <output id="temp-out"></output></label>
+        </div>
+
+        <div class="form-group">
+          <label class="labels">Weather report: <output id="weather-out"></output></label>
+        </div>
+        
+
+        <button type="button" class="btn btn-primary ml-5 mt-2" id="temp-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+  
+  <div class="container-fluid" id="result"></div>
+
+  <script type="text/javascript" src="webpage.js"></script>
+</body>
+
+</html>
